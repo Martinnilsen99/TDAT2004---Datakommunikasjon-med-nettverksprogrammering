@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/martinnilsen/OneDrive - NTNU/Fag/Dataingeniør 2. år/TDAT2004 Datakommunikasjon med nettverksprogrammering/Nettverksprogrammering/Øvinger/Oving1/main.cpp
+iostream
+-
+atomic
+-
+thread
+-
+list
+-
+vector
+-
+
