@@ -1,12 +1,18 @@
 //
 // Created by Martin Johannes Nilsen on 09/02/2020.
+// This application tries to find the prime numbers in a given interval based on an given amount of threads.
+// Potential improvements:
+// 1. Square root instead of "teller" in the for-loop checking if it is a prime number or not
+// 2. The partition for each thread works with the small numbers I use, but if the numbers becomes very large, the threads running the higher number interval will use much more time.
 //
 
 #include <iostream>
-#include <atomic>
 #include <thread>
 #include <list>
 #include <vector>
+#include <math.h>
+#include <atomic>
+
 
 using namespace std;
 
@@ -45,7 +51,7 @@ list<int> finnPrimtallIIntervall(int endeligStartpunkt, int endeligSluttpunkt, i
 }
 
 int main() {
-    list<int> res = finnPrimtallIIntervall(1,100,10);
+    list<int> res = finnPrimtallIIntervall(1,100,5);
     cout << "\nPrimtallene i det gitte intervallet: " << endl << "---------" << endl;
     for(auto const &primtall : res) {
         cout << primtall << "\n";
