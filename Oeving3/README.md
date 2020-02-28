@@ -38,7 +38,7 @@ http://localhost:3000/
 
 <hr/>
 
-### `npm run build`
+### `Run without docker`
 
 You may also want to run everything on your desktop without docker. 
 If so, you'll have to run npm start in one terminal window for the frontend-application, and the backend server in another new terminal window.
