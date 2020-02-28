@@ -41,11 +41,13 @@ If so, you'll have to run npm start in one terminal window for the frontend-appl
 Then you will have to edit the ports in the http-requests in server.js:app.post() (server) and app.js:kompiler() (cppkompilator), because the program uses one port in docker and maps the port to another one on your machine as of now. Change the ports here to 8080 and you should be good to go.
 
 Window 1:
+
 `cd cppkompilator`
 
 `npm start`
 
 Window 2:
+
 `cd server`
 
 `nodemon server.js` or `node server.js`
