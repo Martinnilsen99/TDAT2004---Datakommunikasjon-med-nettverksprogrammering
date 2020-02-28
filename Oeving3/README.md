@@ -7,6 +7,8 @@ This project contains two folders, consisting of:
 Requirements:
 You will have to have docker desktop downloaded
 
+<hr/>
+
 ### `Run the backend server`
 
 Run the following commands:
@@ -22,7 +24,7 @@ This will run the docker image in a container and map the port 8080 on the serve
 If you want to check if the server runs or not, you can open up a browser and type
 http://localhost:49160/test and you should se the text "Testen fungerer".
 
-
+<hr/>
 
 ### `Run the frontend application`
 
@@ -34,8 +36,7 @@ This will run the frontend application locally on your machine.
 You can acces it by opening your browser and type in the url:
 http://localhost:3000/
 
-
-<br/>
+<hr/>
 
 ### `npm run build`
 
@@ -44,17 +45,23 @@ If so, you'll have to run npm start in one terminal window for the frontend-appl
 
 If you want to run the project without docker, you will also have to edit the ports in the http-requests in server.js:app.post() (server) and app.js:kompiler() (cppkompilator). This is because the program uses one port in docker and maps the port to another one on your machine as of now. Change the ports here to 8080 and you should be good to go.
 
-Window 1:
+<br/>
+
+#### Window 1:
 
 `cd cppkompilator`
 
 `npm start`
 
-Window 2:
+<br/>
+
+#### Window 2:
 
 `cd server`
 
 `nodemon server.js` or `node server.js`
+
+<br/>
 
 And you should be able to run the application by accessing:
 http://localhost:3000/
