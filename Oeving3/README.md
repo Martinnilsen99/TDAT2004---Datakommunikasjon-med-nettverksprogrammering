@@ -53,8 +53,6 @@ If you want to run the project without docker, you will also have to edit the po
 
 `npm start`
 
-<br/>
-
 #### Window 2:
 
 `cd server`
