@@ -33,7 +33,7 @@ http://localhost:49160/test and you should se the text "Testen fungerer".
 `npm start`
 
 This will run the frontend application locally on your machine.
-You can acces it by opening your browser and type in the url:
+You can access it by opening your browser and type in the url:
 http://localhost:3000/
 
 <hr/>
