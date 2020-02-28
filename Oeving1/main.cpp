@@ -51,7 +51,7 @@ list<int> finnPrimtallIIntervall(int endeligStartpunkt, int endeligSluttpunkt, i
 }
 
 int main() {
-    list<int> res = finnPrimtallIIntervall(1,100,5);
+    list<int> res = finnPrimtallIIntervall(1,100,20);
     cout << "\nPrimtallene i det gitte intervallet: " << endl << "---------" << endl;
     for(auto const &primtall : res) {
         cout << primtall << "\n";

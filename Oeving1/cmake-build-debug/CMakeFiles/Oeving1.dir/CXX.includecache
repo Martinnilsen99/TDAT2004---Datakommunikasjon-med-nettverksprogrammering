@@ -9,8 +9,6 @@
 /Users/martinnilsen/OneDrive - NTNU/Fag/Dataingeniør 2. år/TDAT2004 Datakommunikasjon med nettverksprogrammering/Nettverksprogrammering/Øvinger/Oeving1/main.cpp
 iostream
 -
-atomic
--
 thread
 -
 list
@@ -18,5 +16,7 @@ list
 vector
 -
 math.h
+-
+atomic
 -
 
