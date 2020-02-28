@@ -44,7 +44,6 @@ You may also want to run everything on your desktop without docker.
 If so, you'll have to run npm start in one terminal window for the frontend-application, and the backend server in another new terminal window.
 
 If you want to run the project without docker, you will also have to edit the ports in the http-requests in server.js:app.post() (server) and app.js:kompiler() (cppkompilator). This is because the program uses one port in docker and maps the port to another one on your machine as of now. Change the ports here to 8080 and you should be good to go.
-
 <br/>
 
 #### Window 1:
