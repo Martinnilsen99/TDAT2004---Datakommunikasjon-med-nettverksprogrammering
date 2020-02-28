@@ -12,7 +12,9 @@ You will have to have docker desktop downloaded
 Run the following commands:
 
 `cd server`
+
 `docker build -t cppcompilator .`
+
 `docker run -p 49160:8080 -d cppcompilator`
 
 This will run the docker image in a container and map the port 8080 on the server to the port 41960 on your machines port.
@@ -21,6 +23,7 @@ This will run the docker image in a container and map the port 8080 on the serve
 ### `Run the frontend application`
 
 `cd cppkompilator`
+
 `npm start`
 
 This will run the frontend application locally on your machine.
@@ -39,10 +42,12 @@ Then you will have to edit the ports in the http-requests in server.js:app.post(
 
 Window 1:
 `cd cppkompilator`
+
 `npm start`
 
 Window 2:
 `cd server`
+
 `nodemon server.js` or `node server.js`
 
 And you should be able to run the application by accessing:
