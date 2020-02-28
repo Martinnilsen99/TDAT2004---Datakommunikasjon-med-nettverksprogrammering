@@ -1,6 +1,6 @@
 This project contains two folders, consisting of:
-- One React application running the frontend server.
-- One NodeJS backend server intended to be ran in docker.
+- React application running the frontend server.
+- NodeJS backend server intended to be ran in docker.
 
 ## For starting up the application you will have to
 
@@ -17,7 +17,11 @@ Run the following commands:
 
 `docker run -p 49160:8080 -d cppcompilator`
 
-This will run the docker image in a container and map the port 8080 on the server to the port 41960 on your machines port.
+This will run the docker image in a container and map the port 8080 on the server to the port 49160 on your machine.
+
+If you want to check if the server runs or not, you can open up a browser and type
+http://localhost:49160/test and you should se the text "Testen fungerer".
+
 
 
 ### `Run the frontend application`
@@ -38,7 +42,7 @@ http://localhost:3000/
 You may also want to run everything on your desktop without docker. 
 If so, you'll have to run npm start in one terminal window for the frontend-application, and the backend server in another new terminal window.
 
-Then you will have to edit the ports in the http-requests in server.js:app.post() (server) and app.js:kompiler() (cppkompilator), because the program uses one port in docker and maps the port to another one on your machine as of now. Change the ports here to 8080 and you should be good to go.
+If you want to run the project without docker, you will also have to edit the ports in the http-requests in server.js:app.post() (server) and app.js:kompiler() (cppkompilator). This is because the program uses one port in docker and maps the port to another one on your machine as of now. Change the ports here to 8080 and you should be good to go.
 
 Window 1:
 
@@ -54,3 +58,6 @@ Window 2:
 
 And you should be able to run the application by accessing:
 http://localhost:3000/
+
+If you want to check if the server runs or not, you can open up a browser and type
+http://localhost:8080/test and you should se the text "Testen fungerer".
