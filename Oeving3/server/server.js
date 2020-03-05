@@ -21,10 +21,13 @@ app.post("/cpp", (req, res) => {
         .then(result => {
             if(result.stderr != ""){
                 let feilmelding = result.stderr;
+                /*
+                * Gammel formatering av res, etter hvordan res av cpp-kompilering så ut
                 split1 = feilmelding.split(".cpp:")
                 linjetall = "Line " + split1[1];
                 split2 = linjetall.split(" error: ");
                 feilmelding = split2[0] + '\n' + split2[1];
+                */
                 res.send(feilmelding);
             }else{
             res.send(result.stdout); 
