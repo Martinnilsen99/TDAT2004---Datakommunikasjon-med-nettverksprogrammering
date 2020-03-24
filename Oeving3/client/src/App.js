@@ -53,7 +53,7 @@ function App() {
     <div id="background">
       <div id="container">
         <div id="title">
-          <h1>Online Compilator</h1>
+          <h1>Online Compiler</h1>
         </div>
         <div id="editor">
           <AceEditor
