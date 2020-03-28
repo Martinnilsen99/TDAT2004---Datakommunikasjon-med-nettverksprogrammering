@@ -9,7 +9,7 @@ const generateAcceptValue = acceptKey =>
     .update(acceptKey + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11", "binary")
     .digest("base64");
 
-// Simple HTTP server responds with a simple WebSocket client test
+//Http server serving clients the frontend-part of the application
 const httpServer = net.createServer(connection => {
   connection.on("data", () => {
     let content = `<!DOCTYPE html>
@@ -119,6 +119,7 @@ const wsServer = net.createServer(connection => {
     }
   });
 
+  //When a client disconnects
   connection.on("end", () => {
     console.log("Client disconnected");
   });
