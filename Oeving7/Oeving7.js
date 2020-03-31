@@ -21,7 +21,7 @@ const httpServer = net.createServer(connection => {
         let ws = new WebSocket('ws://localhost:3001');
         
         ws.onmessage = event => document.getElementById("chatBox").innerHTML = document.getElementById("chatBox").innerHTML + event.data + "</br>";
-
+        
         const onSend = () => {
           let input = document.getElementById("melding").value;
           let navn = document.getElementById("navn").value;
@@ -79,9 +79,7 @@ const httpServer = net.createServer(connection => {
       </body>
     </html>
     `;
-    connection.write(
-      "HTTP/1.1 200 OK\r\nContent-Length: " + content.length + "\r\n\r\n" + content
-    );
+    connection.write("HTTP/1.1 200 OK\r\nContent-Length: " + content.length + "\r\n\r\n" + content);
   });
 });
 httpServer.listen(3000, () => {
@@ -95,7 +93,7 @@ const wsServer = net.createServer(connection => {
 
   //When the server receives data
   connection.on("data", data => {
-    if (data.toString()[0] == "G") {
+    if (data.toString()[0] == "G") { //If its a Get-request
       var key = data.toString().substring(data.toString().indexOf("-Key: ") + 6,data.toString().indexOf("==") + 2);
       var acceptValue = generateAcceptValue(key);
       const responseHeaders = [
@@ -106,7 +104,7 @@ const wsServer = net.createServer(connection => {
       ];
       connection.write(responseHeaders.join("\r\n") + "\r\n\r\n");
       clients.push(connection);
-    } else {
+    } else { //else its a message
       let melding = "";
       let length = data[1] & 127;
       let maskStart = 2;
@@ -115,7 +113,7 @@ const wsServer = net.createServer(connection => {
         let byte = data[i] ^ data[maskStart + ((i - dataStart) % 4)];
         melding += String.fromCharCode(byte);
       }
-      sendMessageToClients(melding, connection);
+      sendToClients(melding, connection);
     }
   });
 
@@ -125,7 +123,7 @@ const wsServer = net.createServer(connection => {
   });
 });
 
-const sendMessageToClients = (melding, c) => {
+const sendToClients = (melding, c) => {
   let buffer = Buffer.concat([
     new Buffer.from([
       0x81,
