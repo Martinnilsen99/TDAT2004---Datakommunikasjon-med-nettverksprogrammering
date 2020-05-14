@@ -11,8 +11,9 @@ class SocketKlient {
         System.out.print("Oppgi navnet på maskinen der tjenerprogrammet kjører: ");
         String tjenermaskin = leserFraKommandovindu.nextLine();
         */
-        String tjenermaskin = "dhcp-10-24-4-91.wlan.ntnu.no";
-        Thread.sleep(3000);
+        //String tjenermaskin = "dhcp-10-24-4-91.wlan.ntnu.no";
+        String tjenermaskin = "localhost";
+	Thread.sleep(3000);
 
         /* Setter opp forbindelsen til tjenerprogrammet */
         Socket forbindelse = new Socket(tjenermaskin, PORTNR);

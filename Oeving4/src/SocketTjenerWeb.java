@@ -6,7 +6,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Date;
 
-public class SocketKlientWeb {
+public class SocketTjenerWeb {
     public static void main(String[] args) throws IOException {
         final ServerSocket serverSocket = new ServerSocket(8080);
         System.out.println("Serveren lytter nå på port 8080");
@@ -27,7 +27,7 @@ public class SocketKlientWeb {
                 Date now = new Date();
                 String res = "HTTP/1.0 200 OK\nContent-Type: text/html; charset=utf-8\n\n\n" +
                         "<HTML><BODY>" +
-                        "<H1> Hilsen. Du har koblet deg opp til min enkle web-tjener </h1>\n" +
+                        "<H1> Hei :) Du har koblet deg opp til min enkle web-tjener </h1>\n" +
                         "Header fra klient er:" +
                         "<ul>" +
                         list +
