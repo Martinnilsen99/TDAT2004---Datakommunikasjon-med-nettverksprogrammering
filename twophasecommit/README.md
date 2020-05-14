@@ -11,12 +11,12 @@
 3. [Class diagram](#class-diagram)
 4. [Sequence diagram](#sequence-diagram)
 5. [Implemented functionality](#implemented-functionality)
-6. [Choices we've made](#technological-architectural-or-design-related-choices-weve-made)
+6. [Choices we've made](#choices)
 7. [Possible future improvements](#possible-future-improvements)
 8. [Installation](#installation)
 9. [Running the program](#running-the-program)
-    1. [An example which will abort](#an-example-in-which-will-abort)
-    2. [An example which will commit](#an-example-in-which-will-commit)
+    1. [An example which will abort](#an-example-which-will-abort)
+    2. [An example which will commit](#an-example-which-will-commit)
 10. [JavaDoc](#javadoc)
 11. [Litterature](#litterature)
 12. [Authors](#authors)
@@ -81,7 +81,7 @@ Our solution has the following functionality:
 - Concise and precise feedback during the transaction process explaining the program flow of each phase.
 
 
-### Technological, architectural and design related choices we've made
+### Technological, architectural and design related choices we've made <a name="choices"></a>
 
 This section will discuss the different techonological and design related choices we have considered, and eventually settled on during the making of our final solution.
 
