@@ -57,14 +57,14 @@ This is the coordinator. In this class all the stages of the transaction are tak
 The Logwriter manages the logs of both the server/coordinator and the participants.
 
 #### Class diagram
-![Class diagram](/assets/diagrams/classDiagram.png)
+![Class diagram](assets/diagrams/classDiagram.png)
 
 #### Sequence diagram 
 ##### Server
-![Sequence diagram for Server](/assets/diagrams/sequenceDiagramForServer.png)
+![Sequence diagram for Server](assets/diagrams/sequenceDiagramForServer.png)
 
 ##### Participant
-![Sequence diagram for Participant](/assets/diagrams/sequenceDiagramForParticipant.png)
+![Sequence diagram for Participant](assets/diagrams/sequenceDiagramForParticipant.png)
 
 > For a further explanation of the classes and their methods, check out the JavaDoc!
 
