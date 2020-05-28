@@ -30,7 +30,7 @@ public class Logwriter{
             resetLogManager();
             String filename = className + "_" + ID;
             String filetype = ".log";
-            String filepath = ID == 0 ? ("../out/logs/" + Server.SESSION_ID + "/" + className + filetype) : ("../src/logs/" + Server.SESSION_ID + "/" + filename + filetype);
+            String filepath = ID == 0 ? ("../out/logs/" + Server.SESSION_ID + "/" + className + filetype) : ("../out/logs/" + Server.SESSION_ID + "/" + filename + filetype);
             File file = new File(filepath);
             logger = Logger.getLogger(filepath.split("/")[3]);
         try{
