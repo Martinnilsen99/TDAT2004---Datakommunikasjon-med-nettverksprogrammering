@@ -5,7 +5,7 @@ This project contains two folders, consisting of:
 ## For starting up the application you will have to
 
 Requirements:
-You will have to have docker desktop downloaded
+You will have to have docker desktop and Node.js downloaded, and installed the node dependencies using `npm install`.
 
 <hr/>
 
@@ -64,4 +64,4 @@ And you should be able to run the application by accessing:
 http://localhost:3000/
 
 If you want to check if the server runs or not, you can open up a browser and type
-http://localhost:8080/test and you should se the text "Testen fungerer".
+http://localhost:8080/test and you should see the text "Testen fungerer".
